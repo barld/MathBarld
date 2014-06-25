@@ -9,9 +9,9 @@ namespace MathBarldTest
     /// Summary description for PremsTests
     /// </summary>
     [TestClass]
-    public class PremsTests
+    public class PriemsTests
     {
-        public PremsTests()
+        public PriemsTests()
         {
             //
             // TODO: Add constructor logic here
@@ -59,11 +59,18 @@ namespace MathBarldTest
         #endregion
 
         [TestMethod]
-        public void TestMethod1()
+        public void PriemsBelowTest()
         {
-            //
-            // TODO: Add test logic here
-            //
+            MathBarld.Priems.GetAllPriemsBelow(10000000);
+        }
+
+        /// <summary>
+        /// deze test methode zou een stuk sneller zijn omdat de cijfers in cache worden gehouden
+        /// </summary>
+        [TestMethod]
+        public void PriemsBelowTest2()
+        {
+            MathBarld.Priems.GetAllPriemsBelow(10100000);
         }
     }
 }
