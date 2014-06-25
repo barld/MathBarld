@@ -27,7 +27,7 @@ namespace MathBarld
                 bool isPriem = true;
                 foreach(int priem in listPriems)
                 {
-                    if (sqrtI > priem) break;
+                    if (sqrtI < priem) break;
                     if(i%priem==0)
                     {
                         isPriem = false;
