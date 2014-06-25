@@ -40,5 +40,12 @@ namespace MathBarld
 
             return listPriems;
         }
+
+        public static bool IsPriem(int possiblePriem)
+        {
+            if (listPriems.Last() < possiblePriem) GetAllPriemsBelow(possiblePriem);
+
+            return listPriems.Exists(x => x == possiblePriem);
+        }
     }
 }
