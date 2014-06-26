@@ -8,7 +8,7 @@ namespace MathBarld
 {
     public static class Faculteit
     {
-        static int GetIteratiev(int input)
+        public static int GetIteratiev(int input)
         {
             int rtw = 1;
             while(input > 0)
@@ -19,7 +19,7 @@ namespace MathBarld
             return rtw;
         }
 
-        static int GetRecursive(int input)
+        public static int GetRecursive(int input)
         {
             if (input == 1) return 1;
             return input * GetRecursive(input - 1);
