@@ -47,6 +47,36 @@ namespace MathBarld
             return new Breuk(teller, noemer);
         }
 
+        public static Breuk operator -(Breuk breakA, Breuk breukB)
+        {
+            int teller = breakA.Teller * breukB.Noemer - breukB.Teller * breakA.Noemer;
+            int noemer = breakA.Noemer * breukB.Noemer;
+
+            return new Breuk(teller, noemer);
+        }
+
+        public static Breuk operator *(Breuk breakA, Breuk breukB)
+        {
+            int teller = breakA.Teller * breukB.Teller;
+            int noemer = breakA.Noemer * breukB.Noemer;
+
+            return new Breuk(teller, noemer);
+        }
+
+        /// <summary>
+        /// op basi van turn keep flip
+        /// </summary>
+        /// <param name="breakA"></param>
+        /// <param name="breukB"></param>
+        /// <returns></returns>
+        public static Breuk operator /(Breuk breakA, Breuk breukB)
+        {
+            int teller = breakA.Teller * breukB.Noemer;
+            int noemer = breakA.Noemer * breukB.Teller;
+
+            return new Breuk(teller, noemer);
+        }
+
         #endregion
     }
 }
