@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Breuk.cs" />
+    <Compile Include="Faculteit.cs" />
+    <Compile Include="Fibonacci.cs" />
     <Compile Include="Priems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

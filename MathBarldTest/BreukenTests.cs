@@ -2,16 +2,17 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MathBarld;
 
 namespace MathBarldTest
 {
     /// <summary>
-    /// Summary description for PremsTests
+    /// Summary description for BreukenTests
     /// </summary>
     [TestClass]
-    public class PriemsTests
+    public class BreukenTests
     {
-        public PriemsTests()
+        public BreukenTests()
         {
             //
             // TODO: Add constructor logic here
@@ -41,18 +42,16 @@ namespace MathBarldTest
         #endregion
 
         [TestMethod]
-        public void PriemsBelowTest()
+        public void BreukenPlusTest()
         {
-            MathBarld.Priems.GetAllPriemsBelow(1000000);
+            //let op getal wordt niet genormaliseerd
+            Assert.AreEqual(new Breuk(1, 2) + new Breuk(1, 2), new Breuk(1, 2) + new Breuk(1, 2));
         }
 
-        /// <summary>
-        /// deze test methode zou een stuk sneller zijn omdat de cijfers in cache worden gehouden
-        /// </summary>
         [TestMethod]
-        public void PriemsBelowTest2()
+        public void BreukenMinTest()
         {
-            MathBarld.Priems.GetAllPriemsBelow(1010000);
+
         }
     }
 }

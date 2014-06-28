@@ -77,6 +77,22 @@ namespace MathBarld
             return new Breuk(teller, noemer);
         }
 
+        public static bool operator ==(Breuk breakA, Breuk breukB)
+        {
+            return breakA.Teller == breukB.Teller && breakA.Noemer == breukB.Noemer;
+        }
+
+        public static bool operator !=(Breuk breakA, Breuk breukB)
+        {
+            return !(breakA == breukB);
+        }
+
+        public override bool Equals(object obj)
+        {
+            Breuk b = obj as Breuk;
+            return this.Noemer == b.Noemer && this.Teller == b.Teller;
+        }
+
         #endregion
     }
 }

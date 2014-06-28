@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathBarld", "MathBarld\MathBarld.csproj", "{F4A73B5B-C614-442F-9D6D-1917E99D658C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathBarldTest", "MathBarldTest\MathBarldTest.csproj", "{0B30E08E-730D-4D41-9506-1D2FDD68FA19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F4A73B5B-C614-442F-9D6D-1917E99D658C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A73B5B-C614-442F-9D6D-1917E99D658C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A73B5B-C614-442F-9D6D-1917E99D658C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B30E08E-730D-4D41-9506-1D2FDD68FA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B30E08E-730D-4D41-9506-1D2FDD68FA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B30E08E-730D-4D41-9506-1D2FDD68FA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B30E08E-730D-4D41-9506-1D2FDD68FA19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
