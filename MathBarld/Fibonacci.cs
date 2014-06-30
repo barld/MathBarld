@@ -21,6 +21,17 @@ namespace MathBarld
                 return GetFibonacciNumberRecursive(number - 1) + GetFibonacciNumberRecursive(number - 2);
         }
 
+        static List<int> numbers = new List<int>() { 0, 1, 1 };
+
+        public static int RecursiveWithCache(int number)
+        {
+            if(numbers.Count < number+1)
+            {                
+                numbers.Add(RecursiveWithCache(number - 1) + RecursiveWithCache(number - 2));
+            }
+            return numbers[number];            
+        }
+
         public static int GetFibonacciNumberIterative(int number)
         {
             if (number == 1)

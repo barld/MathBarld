@@ -92,9 +92,18 @@ namespace MathBarldTest
         }
 
         [TestMethod]
-        public void performanceRecursive40Test()
+        public void RecursiveCacheTest()
         {
-            Fibonacci.GetFibonacciNumberRecursive(40);
+            for(int i = 1;i<20;i++)
+            {
+                Assert.AreEqual(Fibonacci.GetFibonacciNumberIterative(i), Fibonacci.RecursiveWithCache(i));
+            }
+        }
+
+        [TestMethod]
+        public void performanceRecursive35Test()
+        {
+            Fibonacci.GetFibonacciNumberRecursive(35);
         }
 
         [TestMethod]
@@ -102,5 +111,24 @@ namespace MathBarldTest
         {
             Fibonacci.GetFibonacciNumberIterative(40);
         }
+
+        [TestMethod]
+        public void performanceIteratiev4000000Test()
+        {
+            Fibonacci.GetFibonacciNumberIterative(4000000);
+            Fibonacci.GetFibonacciNumberIterative(4000001);
+            Fibonacci.GetFibonacciNumberIterative(4000002);
+        }
+
+        [TestMethod]
+        public void performanceRecursiveWithCache4000000Test()
+        {
+            /*Fibonacci.RecursiveWithCache(4000000);
+            Fibonacci.RecursiveWithCache(4000001);
+            Fibonacci.RecursiveWithCache(4000002);*/
+            Fibonacci.RecursiveWithCache(21003);
+        }
+
+
     }
 }
