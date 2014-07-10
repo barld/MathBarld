@@ -40,10 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Breuk.cs" />
+    <Compile Include="Combination.cs" />
     <Compile Include="Faculteit.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="Priems.cs" />
     <Compile Include="ProjectEuler\IProblem.cs" />
+    <Compile Include="ProjectEuler\Problem3.cs" />
     <Compile Include="ProjectEuler\Problem2.cs" />
     <Compile Include="ProjectEuler\Problem1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
