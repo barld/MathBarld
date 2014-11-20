@@ -49,6 +49,7 @@
     <Compile Include="ProjectEuler\Problem2.cs" />
     <Compile Include="ProjectEuler\Problem1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RomanNumeral.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
