@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MathBarld;
+using System.Math;
+using MathBarld.Priems;
 
 namespace MathBarld.ProjectEuler
 {
@@ -21,7 +23,20 @@ What is the largest prime factor of the number 600851475143 ?";
 
         public int GetAnswer()
         {
-            throw new NotImplementedException();
+            Int64 StartNumber = 600851475143;
+            int maxnumber = (int)Sqrt((double)StartNumber);
+
+            int max = 0;
+
+            foreach(int priem in GetPriemsBelowParallel(maxnumber))
+            {
+                if (StartNumber % priem == 0 && max < priem)
+                    max = priem;
+            }
+
+
+
+            return max;
         }
     }
 }
