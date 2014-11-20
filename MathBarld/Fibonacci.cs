@@ -8,9 +8,6 @@ namespace MathBarld
 {
     public class Fibonacci
     {
-        static int f1 = 1;
-        static int f2 = 1;
-
         public static int GetFibonacciNumberRecursive(int number)
         {
             if (number <= 2)
@@ -32,16 +29,11 @@ namespace MathBarld
 
         public static int GetFibonacciNumberIterative(int number)
         {
-            if (number == 1)
-                return f1;
-            else if (number == 2)
-                return f2;
+            if (number <= 2)
+                return 1;
             else
             {
-                int t1 = f1;
-                int t2 = f2;
-                int rtw = 0;
-
+                int t1 = 1, t2 = 1, rtw = 0;
                 do
                 {
                     rtw = t1 + t2;
