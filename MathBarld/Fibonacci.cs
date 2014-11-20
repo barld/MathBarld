@@ -13,10 +13,8 @@ namespace MathBarld
 
         public static int GetFibonacciNumberRecursive(int number)
         {
-            if (number == 1)
-                return f1;
-            else if (number == 2)
-                return f2;
+            if (number <= 2)
+                return 1;
             else
                 return GetFibonacciNumberRecursive(number - 1) + GetFibonacciNumberRecursive(number - 2);
         }
