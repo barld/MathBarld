@@ -11,7 +11,7 @@ namespace MathBarld.ProjectEuler
 
 Find the largest palindrome made from the product of two 3-digit numbers.d";
 
-        public int GetAnswer()
+        public long GetAnswer()
         {
             int maxpal = 0;
 
@@ -26,7 +26,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.d";
                 }
             }
 
-            return maxpal;
+            return (long)maxpal;
         }
     }
 }

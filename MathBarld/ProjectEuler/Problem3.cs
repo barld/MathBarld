@@ -9,7 +9,7 @@ using MathBarld.Priems;
 
 namespace MathBarld.ProjectEuler
 {
-    public class Problem3 : MathBarld.ProjectEuler.IProblem
+    public class Problem3 : IProblem
     {
         public string ProblemDescription
         {
@@ -21,7 +21,7 @@ What is the largest prime factor of the number 600851475143 ?";
             }
         }
 
-        public int GetAnswer()
+        public long GetAnswer()
         {
             Int64 StartNumber = 600851475143;
             int maxnumber = (int)Sqrt((double)StartNumber);
@@ -36,7 +36,7 @@ What is the largest prime factor of the number 600851475143 ?";
 
 
 
-            return max;
+            return (long)max;
         }
     }
 }

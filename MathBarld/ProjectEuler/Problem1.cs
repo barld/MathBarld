@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathBarld.ProjectEuler
 {
-    public class Problem1 : MathBarld.ProjectEuler.IProblem
+    public class Problem1 : IProblem
     {
         public string ProblemDescription
         {
@@ -17,7 +17,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.";
             }
         }
 
-        public int GetAnswer()
+        public long GetAnswer()
         {
             int som = 0;
             for(int i = 1;i<1000;i++)
@@ -25,7 +25,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.";
                 if (i % 3 == 0 || i % 5 == 0)
                     som += i;
             }
-            return som;
+            return (long)som;
         }
     }
 }

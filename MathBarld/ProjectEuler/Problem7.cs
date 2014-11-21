@@ -13,6 +13,6 @@ namespace MathBarld.ProjectEuler
 
 What is the 10 001st prime number?";
 
-        public int GetAnswer() => GetPriemN(10001);
+        public long GetAnswer() => (long)GetPriemN(10001);
     }
 }

@@ -18,7 +18,7 @@ Hence the difference between the sum of the squares of the first ten natural num
 
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.";
 
-        public int GetAnswer()
+        public long GetAnswer()
         {
             int SumSqueres = 0, SquiresSum = 0;
             for(int i=1;i<=100;i++)
@@ -28,7 +28,7 @@ Find the difference between the sum of the squares of the first one hundred natu
             }
             SumSqueres *= SumSqueres;
 
-            return SumSqueres - SquiresSum;
+            return (long)(SumSqueres - SquiresSum);
         }
     }
 }

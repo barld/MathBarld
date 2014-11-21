@@ -3,7 +3,7 @@ namespace MathBarld.ProjectEuler
 {
     public interface IProblem
     {
-        int GetAnswer();
+        long GetAnswer();
         string ProblemDescription { get; }
     }
 }

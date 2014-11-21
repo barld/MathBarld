@@ -21,7 +21,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
             }
         }
 
-        public int GetAnswer()
+        public long GetAnswer()
         {
             int rtw = 0;
             int value = 0;
@@ -37,7 +37,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
                 number++;
             }
 
-            return rtw;
+            return (long)rtw;
         }
     }
 }
