@@ -53,7 +53,9 @@
     <Compile Include="BreukenTests.cs" />
     <Compile Include="FaculteitTests.cs" />
     <Compile Include="FibonacciTests.cs" />
+    <Compile Include="PalindromeTests.cs" />
     <Compile Include="PremsTests.cs" />
+    <Compile Include="ProjectEulerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

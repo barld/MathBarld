@@ -43,15 +43,22 @@
     <Compile Include="Combination.cs" />
     <Compile Include="Faculteit.cs" />
     <Compile Include="Fibonacci.cs" />
+    <Compile Include="Palindrome.cs" />
     <Compile Include="Priems.cs" />
+    <Compile Include="ProjectEuler\Problem4.cs" />
     <Compile Include="ProjectEuler\IProblem.cs" />
     <Compile Include="ProjectEuler\Problem3.cs" />
     <Compile Include="ProjectEuler\Problem2.cs" />
     <Compile Include="ProjectEuler\Problem1.cs" />
+    <Compile Include="ProjectEuler\Problem5.cs" />
+    <Compile Include="ProjectEuler\Problem6.cs" />
+    <Compile Include="ProjectEuler\Problem7.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RomanNumeral.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ProjectEuler\ClassDiagramProjectEuler.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

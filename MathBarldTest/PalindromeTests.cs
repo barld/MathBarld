@@ -3,19 +3,39 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using MathBarld;
+
 namespace MathBarldTest
 {
     /// <summary>
-    /// Summary description for PremsTests
+    /// Summary description for PalindromeTests
     /// </summary>
     [TestClass]
-    public class PriemsTests
+    public class PalindromeTests
     {
-        public PriemsTests()
+        public PalindromeTests()
         {
             //
             // TODO: Add constructor logic here
             //
+        }
+
+        private TestContext testContextInstance;
+
+        /// <summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
+        {
+            get
+            {
+                return testContextInstance;
+            }
+            set
+            {
+                testContextInstance = value;
+            }
         }
 
         #region Additional test attributes
@@ -41,25 +61,16 @@ namespace MathBarldTest
         #endregion
 
         [TestMethod]
-        public void PriemsBelowTest()
+        public void PalindromeWords()
         {
-            MathBarld.Priems.GetAllPriemsBelow(100000);
-        }
-
-        /// <summary>
-        /// deze test methode zou een stuk sneller zijn omdat de cijfers in cache worden gehouden
-        /// </summary>
-        [TestMethod]
-        public void PriemsBelowTest2()
-        {
-            MathBarld.Priems.GetAllPriemsBelow(101000);
+            Assert.IsTrue("maandnaam".IsPalindrome());
+            Assert.IsFalse("Hello".IsPalindrome());
         }
 
         [TestMethod]
-        public void PriemsBelow1000Parralel()
+        public void PalinDromeWithSentence()
         {
-            var priems = MathBarld.Priems.GetPriemsBelowParallel(4 * 1000 * 100);
-            //MathBarld.Priems.GetAllPriemsBelow(1000);
+            Assert.IsTrue("er is daar nog onraad sire".IsPalindrome(true));
         }
     }
 }

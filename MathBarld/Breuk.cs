@@ -93,6 +93,11 @@ namespace MathBarld
             return this.Noemer == b.Noemer && this.Teller == b.Teller;
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         #endregion
     }
 }

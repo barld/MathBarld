@@ -100,5 +100,29 @@ namespace MathBarld
 
             return PriemList;
         }
+
+        public static int GetPriemN(int n)
+        {
+            List<int> priems = new List<int>(new int[] { 2 });
+
+            for (int i = 3; ; i += 2)
+            {
+                bool isPriem = true;
+                foreach (int priem in priems)
+                {
+                    if (i % priem == 0)
+                    {
+                        isPriem = false;
+                        break;
+                    }
+                }
+                if (isPriem)
+                    priems.Add(i);
+
+                if (priems.Count == n)
+                    return i;
+            }
+
+        }
     }
 }
