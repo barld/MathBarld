@@ -71,5 +71,13 @@ namespace MathBarldTest
 
             Assert.IsTrue(p8.GetAnswer() == 23514624000);
         }
+
+        [TestMethod]
+        public void Problem9()
+        {
+            IProblem p9 = new Problem9();
+
+            Assert.IsTrue(p9.GetAnswer() == 31875000);
+        }
     }
 }

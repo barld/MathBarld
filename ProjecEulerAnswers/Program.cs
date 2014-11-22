@@ -23,6 +23,7 @@ namespace ProjecEulerAnswers
                     new Problem6(),
                     new Problem7(),
                     new Problem8(),
+                    new Problem9()
                 };
             #endregion
 
