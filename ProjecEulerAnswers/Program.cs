@@ -63,7 +63,14 @@ voor een cijfer in om het probleem te krijgen
                                 Console.WriteLine("Problem don't exists");
                             }
                             else
+                            {
+                                System.Diagnostics.Stopwatch stp = new System.Diagnostics.Stopwatch();
+                                stp.Start();
                                 Console.WriteLine(problems.First(p => p.GetType().Name == "Problem" + answer).GetAnswer());
+                                stp.Stop();
+                                Console.WriteLine(stp.Elapsed.ToString());
+                                Console.WriteLine();
+                            }
                         }
                         break;
                 }
