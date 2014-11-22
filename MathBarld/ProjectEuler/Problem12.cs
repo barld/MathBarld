@@ -28,6 +28,33 @@ What is the value of the first triangle number to have over five hundred divisor
 
         public long GetAnswer()
         {
+            int triangle = 0;
+            int diviserscoumt = 0;
+            for (int i = 1;diviserscoumt<500 ; i++)
+            {
+                triangle += i;
+                diviserscoumt = 0;
+                int sqrt = (int)Sqrt(triangle);
+                if (sqrt * sqrt == triangle)
+                    diviserscoumt--;
+                if (triangle%2==0)
+                    for (int j = 1; j <= sqrt; j++)
+                    {
+                        if (triangle % j == 0)
+                            diviserscoumt += 2;
+                    }
+                else
+                    for (int j = 1; j <= sqrt; j+=2)
+                    {
+                        if (triangle % j == 0)
+                            diviserscoumt += 2;
+                    }
+            }
+            return (long)triangle;
+        }
+
+        public long GetAnswer2()
+        {
             long triangle = 0;
             for (int i = 1; ; i++)
             {
@@ -50,7 +77,7 @@ What is the value of the first triangle number to have over five hundred divisor
         /// methode werkt maar heeft erg slechte performance
         /// </summary>
         /// <returns></returns>
-        public long GetAnswer2()
+        public long GetAnswer3()
         {
             long triangle = 0;
             for (int i = 1; ; i++)
