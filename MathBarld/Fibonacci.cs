@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,6 +35,28 @@ namespace MathBarld
             else
             {
                 int t1 = 1, t2 = 1, rtw = 0;
+                do
+                {
+                    rtw = t1 + t2;
+
+                    t2 = t1;
+                    t1 = rtw;
+
+                    number--;
+                }
+                while (number > 2);
+
+                return rtw;
+            }
+        }
+
+        public static BigInteger GetFibonacciNumberIterativeBig(BigInteger number)
+        {
+            if (number <= 2)
+                return 1;
+            else
+            {
+                BigInteger t1 = 1, t2 = 1, rtw = 0;
                 do
                 {
                     rtw = t1 + t2;
