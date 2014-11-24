@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BreukenTests.cs" />
+    <Compile Include="CollatzTests.cs" />
     <Compile Include="FaculteitTests.cs" />
     <Compile Include="FibonacciTests.cs" />
     <Compile Include="PalindromeTests.cs" />

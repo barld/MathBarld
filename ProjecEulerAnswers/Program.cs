@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MathBarld.ProjectEuler;
+using System.Console;
 
 namespace ProjecEulerAnswers
 {
@@ -27,6 +28,13 @@ namespace ProjecEulerAnswers
                     new Problem10(),
                     new Problem11(),
                     new Problem12(),
+                    new Problem13(),
+                    new Problem14(),
+                    new Problem15(),
+                    new Problem16(),
+                    new Problem18(),
+                    new Problem19(),
+                    new Problem20(),
                 };
             #endregion
 

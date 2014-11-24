@@ -56,10 +56,38 @@ namespace MathBarldTest
         }
 
         [TestMethod]
-        public void PriemsBelow1000Parralel()
+        public void PriemsBelow10MilionParralel()
         {
-            var priems = MathBarld.Priems.GetPriemsBelowParallel(4 * 1000 * 100);
-            //MathBarld.Priems.GetAllPriemsBelow(1000);
+            var priems = MathBarld.Priems.GetPriemsBelowParallel(10 * 1000 * 1000);
+            Assert.AreEqual<int>(664579, priems.Count);
         }
+
+        //[TestMethod]
+        //public void PriemsBelow10MilionParralelBag()
+        //{
+        //    var priems = MathBarld.Priems.GetPriemsBelowParallelBag(10 * 1000 * 1000);
+        //    Assert.AreEqual<int>(664579, priems.Count);
+        //}
+
+        [TestMethod]
+        public void PriemsBelow20MilionParralel()
+        {
+            var priems = MathBarld.Priems.GetPriemsBelowParallel(20 * 1000 * 1000);
+            //Assert.AreEqual<int>(5761455, priems.Count);
+        }
+
+        [TestMethod]
+        public void PriemsBelow5MilParralel()
+        {
+            var priems = MathBarld.Priems.GetPriemsBelowParallel(5000000);
+            //Assert.AreEqual<int>(50847534, priems.Count);
+        }
+
+        //[TestMethod]
+        //public void PriemsBelow5MilParralelBag()
+        //{
+        //    var priems = MathBarld.Priems.GetPriemsBelowParallelBag(5000000);
+        //    //Assert.AreEqual<int>(50847534, priems.Count);
+        //}
     }
 }

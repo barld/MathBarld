@@ -103,5 +103,70 @@ namespace MathBarldTest
 
             Assert.IsTrue(p12.GetAnswer() == 76576500);
         }
+
+        [TestMethod]
+        public void Problem13()
+        {
+            IProblem p13 = new Problem13();
+
+            Assert.IsTrue(p13.GetAnswer() == 5537376230);
+        }
+
+        
+        [TestMethod]
+        public void Problem14()
+        {
+            IProblem p14 = new Problem14();
+
+            Assert.IsTrue(p14.GetAnswer() == 837799);
+        }
+
+        [TestMethod]
+        public void Problem15()
+        {
+            IProblem p15 = new Problem15();
+
+            Assert.IsTrue(p15.GetAnswer() == 137846528820);
+        }
+
+        [TestMethod]
+        public void Problem16()
+        {
+            IProblem p16 = new Problem16();
+
+            Assert.IsTrue(p16.GetAnswer() == 1366);
+        }
+
+        [TestMethod]
+        public void Problem18()
+        {
+            IProblem p18 = new Problem18();
+
+            Assert.IsTrue(p18.GetAnswer() == 1074);
+        }
+
+        [TestMethod]
+        public void Problem19()
+        {
+            IProblem p19 = new Problem19();
+
+            Assert.IsTrue(p19.GetAnswer() == 171);
+        }
+
+        [TestMethod]
+        public void Problem20()
+        {
+            IProblem p20 = new Problem20();
+
+            Assert.IsTrue(p20.GetAnswer() == 648);
+        }
+
+        [TestMethod]
+        public void Problem25()
+        {
+            IProblem p25 = new Problem25();
+
+            Assert.IsTrue(p25.GetAnswer() == 4782);
+        }
     }
 }

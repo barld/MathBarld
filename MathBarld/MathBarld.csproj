@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Breuk.cs" />
+    <Compile Include="Collatz.cs" />
     <Compile Include="Combination.cs" />
     <Compile Include="Faculteit.cs" />
     <Compile Include="Fibonacci.cs" />
@@ -48,6 +50,14 @@
     <Compile Include="ProjectEuler\Problem10.cs" />
     <Compile Include="ProjectEuler\Problem11.cs" />
     <Compile Include="ProjectEuler\Problem12.cs" />
+    <Compile Include="ProjectEuler\Problem13.cs" />
+    <Compile Include="ProjectEuler\Problem14.cs" />
+    <Compile Include="ProjectEuler\Problem15.cs" />
+    <Compile Include="ProjectEuler\Problem16.cs" />
+    <Compile Include="ProjectEuler\Problem18.cs" />
+    <Compile Include="ProjectEuler\Problem19.cs" />
+    <Compile Include="ProjectEuler\Problem20.cs" />
+    <Compile Include="ProjectEuler\Problem25.cs" />
     <Compile Include="ProjectEuler\Problem4.cs" />
     <Compile Include="ProjectEuler\IProblem.cs" />
     <Compile Include="ProjectEuler\Problem3.cs" />

@@ -30,7 +30,7 @@ What is the value of the first triangle number to have over five hundred divisor
         {
             int triangle = 0;
             int diviserscoumt = 0;
-            for (int i = 1;diviserscoumt<500 ; i++)
+            for (UInt16 i = 1;diviserscoumt<500 ; i++)
             {
                 triangle += i;
                 diviserscoumt = 0;
