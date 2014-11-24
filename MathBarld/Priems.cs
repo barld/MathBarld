@@ -67,12 +67,16 @@ namespace MathBarld
                 int[] IteratePriems = PriemList.ToArray();
                 //stop
                 int stop = IteratePriems.Last() * IteratePriems.Last();
-                if (stop > tot)
+                if (stop > tot || stop < 0)
+                {
                     stop = tot;
+                    int sqrt = (int)Math.Sqrt(tot)+1;
+                    IteratePriems = IteratePriems.Where(x => x <= sqrt).ToArray();
+                }
 
 
 
-                Parallel.ForEach(GetRange(IteratePriems.Last() + 2, stop), (i) =>
+                Parallel.ForEach(GetRange(PriemList.Last() + 2, stop), (i) =>
                 {
                     bool isPriem = true;
                     foreach (int priem in IteratePriems)
