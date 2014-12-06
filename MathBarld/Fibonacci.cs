@@ -34,19 +34,17 @@ namespace MathBarld
                 return 1;
             else
             {
-                int t1 = 1, t2 = 1, rtw = 0;
+                int t1 = 1, t2 = 1;
                 do
                 {
-                    rtw = t1 + t2;
-
-                    t2 = t1;
-                    t1 = rtw;
+                    t1 += t2;
+                    t2 = t1 - t2;
 
                     number--;
                 }
                 while (number > 2);
 
-                return rtw;
+                return t1;
             }
         }
 
@@ -56,19 +54,17 @@ namespace MathBarld
                 return 1;
             else
             {
-                BigInteger t1 = 1, t2 = 1, rtw = 0;
+                BigInteger t1 = 1, t2 = 1;
                 do
                 {
-                    rtw = t1 + t2;
-
-                    t2 = t1;
-                    t1 = rtw;
+                    t1 += t2;
+                    t2 = t1 - t2;
 
                     number--;
                 }
                 while (number > 2);
 
-                return rtw;
+                return t1;
             }
         }
     }
