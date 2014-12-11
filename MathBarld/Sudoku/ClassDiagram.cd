@@ -1,25 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="MathBarld.Sudoku.Sudoku">
-    <Position X="1" Y="1" Width="1.5" />
+    <Position X="1" Y="1" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Sudoku\Sudoku.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SudokuCells" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="MathBarld.Sudoku.SudokuCell" Collapsed="true">
-    <Position X="5" Y="2" Width="1.5" />
+  <Class Name="MathBarld.Sudoku.SudokuCell">
+    <Position X="1" Y="3.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Sudoku\SudokuCell.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MathBarld.Sudoku.SudokuSolver" Collapsed="true">
-    <Position X="9" Y="2" Width="1.5" />
+  <Class Name="MathBarld.Sudoku.SudokuSolver">
+    <Position X="7.25" Y="1.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAABAABAAAAAABAAAAA=</HashCode>
       <FileName>Sudoku\SudokuSolver.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sudoku" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
