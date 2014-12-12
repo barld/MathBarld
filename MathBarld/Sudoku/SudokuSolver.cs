@@ -8,6 +8,8 @@ namespace MathBarld.Sudoku
 {
     public class SudokuSolver
     {
+        private static ISolver[] SolveHethods;
+
         public Sudoku Sudoku { get; private set; }
 
         public bool IsSolved
@@ -36,5 +38,30 @@ namespace MathBarld.Sudoku
         {
             Sudoku = sudoku;
         }
+
+        #region solving logic
+
+        interface ISolver
+        {
+            void TrySolve(Sudoku sudoku);
+        }
+
+        class SolveMethod1 : ISolver
+        {
+            public void TrySolve(Sudoku sudoku)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        class SolveMethod2 : ISolver
+        {
+            public void TrySolve(Sudoku sudoku)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        #endregion
     }
 }
