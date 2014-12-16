@@ -8,40 +8,27 @@ namespace MathBarld.Sudoku
 {
     public class SudokuCell
     {
-        public List<int> PosibleAnswers
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+        public List<int> PosibleAnswers { get; internal set; }
 
-            set
-            {
-            }
-        }
-
-        public int? Answer
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
+        public int? Answer { get; internal set; }
 
         public bool HasAnswer
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Answer == null;
             }
+        }
 
-            set
-            {
-            }
+        public SudokuCell()
+        {
+            PosibleAnswers = Enumerable.Range(1, 9).ToList();
+        }
+
+        public SudokuCell(int value)
+        {
+            Answer = value;
+            PosibleAnswers = new List<int>();
         }
     }
 }
