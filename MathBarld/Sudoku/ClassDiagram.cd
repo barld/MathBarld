@@ -11,7 +11,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MathBarld.Sudoku.SudokuCell">
-    <Position X="1" Y="3.5" Width="3" />
+    <Position X="1" Y="3.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Sudoku\SudokuCell.cs</FileName>
@@ -23,22 +23,20 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Interface Name="MathBarld.Sudoku.SudokuSolver.ISolver" Collapsed="true">
+      <Class Name="MathBarld.Sudoku.SudokuSolver.VerticalSolving">
         <TypeIdentifier>
           <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
         </TypeIdentifier>
-      </Interface>
-      <Class Name="MathBarld.Sudoku.SudokuSolver.SolveMethod2" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
-        </TypeIdentifier>
-        <Lollipop Position="0.2" />
       </Class>
-      <Class Name="MathBarld.Sudoku.SudokuSolver.SolveMethod1" Collapsed="true">
+      <Class Name="MathBarld.Sudoku.SudokuSolver.ISolver" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
         </TypeIdentifier>
-        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="MathBarld.Sudoku.SudokuSolver.HorizontalSolving" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
+        </TypeIdentifier>
       </Class>
     </NestedTypes>
     <TypeIdentifier>

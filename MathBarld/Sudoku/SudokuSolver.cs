@@ -8,7 +8,13 @@ namespace MathBarld.Sudoku
 {
     public class SudokuSolver
     {
-        private static ISolver[] SolveHethods;
+        private static ISolver[] SolveMethods =
+            {
+                new HorizontalSolving(),
+                new VerticalSolving(),
+                new InHokSolving(),
+
+            };
 
         public Sudoku Sudoku { get; private set; }
 
@@ -16,17 +22,27 @@ namespace MathBarld.Sudoku
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
+                //kijk nu alleen simpel of iedere cell een antwoord heeft
+                for(int i=0;i<81;i++)
+                    if (!Sudoku.SudokuCells[i / 9, i % 9].HasAnswer)
+                        return false;
+                return true;
             }
         }
 
         public bool Solve()
         {
-            throw new System.NotImplementedException();
+            do
+            {
+                foreach (ISolver solver in SolveMethods)
+                {
+                    solver.TrySolve(this.Sudoku);
+                }
+            }
+            while (!IsSolved);
+            
+
+            return IsSolved;
         }
 
         public Task<bool> SolveAsync()
@@ -46,19 +62,73 @@ namespace MathBarld.Sudoku
             void TrySolve(Sudoku sudoku);
         }
 
-        class SolveMethod1 : ISolver
+        class HorizontalSolving : ISolver
         {
             public void TrySolve(Sudoku sudoku)
             {
-                throw new NotImplementedException();
+                for(int i=0;i<81;i++)
+                {
+                    if (sudoku.SudokuCells[i / 9, i % 9].HasAnswer)
+                        continue;
+                    else
+                    {
+                        SudokuCell cell = sudoku.SudokuCells[i / 9, i % 9];
+                        for(int j=0;j<9;j++)
+                        {
+                            if (sudoku.SudokuCells[i / 9, j].HasAnswer)
+                                cell.PosibleAnswers.Remove((sudoku.SudokuCells[i / 9, j].Answer ?? 0));
+                        }
+                        if (cell.PosibleAnswers.Count == 1)
+                            cell.Answer = cell.PosibleAnswers.First();
+                    }
+                }
             }
         }
 
-        class SolveMethod2 : ISolver
+        class VerticalSolving : ISolver
         {
             public void TrySolve(Sudoku sudoku)
             {
-                throw new NotImplementedException();
+                for (int i = 0; i < 81; i++)
+                {
+                    if (sudoku.SudokuCells[i / 9, i % 9].HasAnswer)
+                        continue;
+                    else
+                    {
+                        SudokuCell cell = sudoku.SudokuCells[i / 9, i % 9];
+                        for (int j = 0; j < 9; j++)
+                        {
+                            if (sudoku.SudokuCells[j, i%9].HasAnswer)
+                                cell.PosibleAnswers.Remove((sudoku.SudokuCells[j, i % 9].Answer ?? 0));
+                        }
+                        if (cell.PosibleAnswers.Count == 1)
+                            cell.Answer = cell.PosibleAnswers.First();
+                    }
+                }
+            }
+        }
+
+        class InHokSolving : ISolver
+        {
+            public void TrySolve(Sudoku sudoku)
+            {
+                for (int i = 0; i < 81; i++)
+                {
+                    if (sudoku.SudokuCells[i / 9, i % 9].HasAnswer)
+                        continue;
+                    else
+                    {
+                        SudokuCell cell = sudoku.SudokuCells[i / 9, i % 9];
+                        
+                        for(int j=0;j<9;j++)
+                        {
+                            if (sudoku.SudokuCells[((i / 9) / 3) * 3 + j / 3, ((i % 9) / 3) * 3 + j % 3].HasAnswer)
+                                cell.PosibleAnswers.Remove((sudoku.SudokuCells[((i / 9) / 3) * 3 + j / 3, ((i % 9) / 3) * 3 + j % 3].Answer ?? 0));
+                        }
+                        if (cell.PosibleAnswers.Count == 1)
+                            cell.Answer = cell.PosibleAnswers.First();
+                    }
+                }
             }
         }
 

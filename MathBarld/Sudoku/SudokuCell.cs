@@ -16,7 +16,7 @@ namespace MathBarld.Sudoku
         {
             get
             {
-                return Answer == null;
+                return Answer != null;
             }
         }
 
@@ -27,6 +27,7 @@ namespace MathBarld.Sudoku
 
         public SudokuCell(int value)
         {
+            if (value < 0 && value > 9) throw new ArgumentOutOfRangeException(nameof(value), "value must between 1 and 9");
             Answer = value;
             PosibleAnswers = new List<int>();
         }

@@ -58,6 +58,7 @@
     <Compile Include="PremsTests.cs" />
     <Compile Include="ProjectEulerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SudokuTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MathBarld\MathBarld.csproj">
