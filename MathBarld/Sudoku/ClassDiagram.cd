@@ -3,7 +3,7 @@
   <Class Name="MathBarld.Sudoku.Sudoku">
     <Position X="1" Y="1" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAIAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AAIAQAAAAAAAAAAEAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Sudoku\Sudoku.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -23,20 +23,34 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Class Name="MathBarld.Sudoku.SudokuSolver.VerticalSolving">
+      <Interface Name="MathBarld.Sudoku.SudokuSolver.ISolver" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
         </TypeIdentifier>
-      </Class>
-      <Class Name="MathBarld.Sudoku.SudokuSolver.ISolver" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
+      </Interface>
       <Class Name="MathBarld.Sudoku.SudokuSolver.HorizontalSolving" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
         </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="MathBarld.Sudoku.SudokuSolver.VerticalSolving">
+        <TypeIdentifier>
+          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="MathBarld.Sudoku.SudokuSolver.CandidateLinesHorizontalSolving" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="MathBarld.Sudoku.SudokuSolver.InBoxSolving" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sudoku\SudokuSolver.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
       </Class>
     </NestedTypes>
     <TypeIdentifier>

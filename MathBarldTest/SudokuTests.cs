@@ -20,6 +20,17 @@ namespace MathBarldTest
                 { 0,0,2,6,0,9,5,0,0 },
                 { 8,0,0,2,0,3,0,0,9 },
                 { 0,0,5,0,1,0,3,0,0 }
+            },
+            new int[9,9] {
+                { 2,0,0,0,8,0,3,0,0 },
+                { 0,6,0,0,7,0,0,8,4 },
+                { 0,3,0,5,0,0,2,0,9 },
+                { 0,0,0,1,0,5,4,0,8 },
+                { 0,0,0,0,0,0,0,0,0 },
+                { 4,0,2,7,0,6,0,0,0 },
+                { 3,0,1,0,0,7,0,4,0 },
+                { 7,2,0,0,4,0,0,6,0 },
+                { 0,0,4,0,1,0,0,0,3 }
             }
         };
 
@@ -27,6 +38,17 @@ namespace MathBarldTest
         public void SolveSudoku0()
         {
             var s = new Sudoku(sudokuData[0]);
+            var solver = new SudokuSolver(s);
+
+            solver.Solve();
+
+            Assert.IsTrue(solver.IsSolved);
+        }
+
+        [TestMethod]
+        public void SolveSudoku1()
+        {
+            var s = new Sudoku(sudokuData[1]);
             var solver = new SudokuSolver(s);
 
             solver.Solve();

@@ -12,7 +12,9 @@ namespace MathBarld.Sudoku
             {
                 new HorizontalSolving(),
                 new VerticalSolving(),
-                new InHokSolving(),
+                new InBoxSolving(),
+                new OnlyOneInBoxSolving(),
+                //new CandidateLinesHorizontalSolving(),//not stable
 
             };
 
@@ -108,7 +110,7 @@ namespace MathBarld.Sudoku
             }
         }
 
-        class InHokSolving : ISolver
+        class InBoxSolving : ISolver
         {
             public void TrySolve(Sudoku sudoku)
             {
@@ -127,6 +129,81 @@ namespace MathBarld.Sudoku
                         }
                         if (cell.PosibleAnswers.Count == 1)
                             cell.Answer = cell.PosibleAnswers.First();
+                    }
+                }
+            }
+        }
+
+        class OnlyOneInBoxSolving : ISolver
+        {
+            public void TrySolve(Sudoku sudoku)
+            {
+                for (int i = 0; i < 81; i++)
+                {
+                    if (sudoku.SudokuCells[i / 9, i % 9].HasAnswer)
+                        continue;
+                    else
+                    {
+                        SudokuCell cell = sudoku.SudokuCells[i / 9, i % 9];
+
+                        foreach(int value in cell.PosibleAnswers)
+                        {
+                            bool arePosible = true;
+                            for (int j = 0; j < 9; j++)
+                            {
+                                if (sudoku.SudokuCells[((i / 9) / 3) * 3 + j / 3, ((i % 9) / 3) * 3 + j % 3].PosibleAnswers.Exists(x => x == value))
+                                    arePosible = false;
+                            }
+                            if (arePosible)
+                                cell.Answer = value;
+                        }
+                        if (cell.HasAnswer)
+                            cell.PosibleAnswers.Clear();
+                    }
+                }
+            }
+        }
+
+        class CandidateLinesHorizontalSolving : ISolver
+        {
+            public void TrySolve(Sudoku sudoku)
+            {
+                //iterate boxes
+                for(int box=0;box<9;box++)
+                {
+                    for(int i = 0;i<9;i++)
+                    {
+                        var cell = sudoku.SudokuCells[(box / 3) * 3 + i / 3, (box % 3) * 3 + i % 3];
+                        if (cell.HasAnswer) continue;
+
+                        foreach (int valueToCheck in cell.PosibleAnswers)
+                        {
+                            bool hasValue = false;
+                            for(int j =0;j<9;j++)
+                            {
+                                //in zelfde rij skip
+                                if (j / 3 == i / 3) continue;
+
+                                if(sudoku.SudokuCells[(box / 3) * 3 + j / 3, (box % 3) * 3 + j % 3].PosibleAnswers.Contains(valueToCheck))
+                                {
+                                    hasValue = true;
+                                    break;
+                                }
+                            }
+                            //er mag worden gestreept als dit waar is
+                            if(!hasValue)
+                            {
+                                for(int j = 0;j<9;j++)
+                                {
+                                    //mag niet in dezelfde box zitten
+                                    if (box % 3 == j / 3) continue;
+
+                                    if(sudoku.SudokuCells[(box / 3) * 3 + i / 3, j].PosibleAnswers.Remove(valueToCheck))
+                                        if (sudoku.SudokuCells[(box / 3) * 3 + i / 3, j].PosibleAnswers.Count == 1)
+                                            cell.Answer = sudoku.SudokuCells[(box / 3) * 3 + i / 3, j].PosibleAnswers.First();
+                                }
+                            }
+                        }                        
                     }
                 }
             }
