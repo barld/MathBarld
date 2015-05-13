@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Math;
 
 namespace MathBarld.ProjectEuler
 {
@@ -34,7 +33,7 @@ What is the value of the first triangle number to have over five hundred divisor
             {
                 triangle += i;
                 diviserscoumt = 0;
-                int sqrt = (int)Sqrt(triangle);
+                int sqrt = (int)Math.Sqrt(triangle);
                 if (sqrt * sqrt == triangle)
                     diviserscoumt--;
                 if (triangle%2==0)
@@ -60,7 +59,7 @@ What is the value of the first triangle number to have over five hundred divisor
             {
                 triangle += i;
                 int diviserscoumt = 0;
-                int sqrt = (int)Sqrt(triangle);
+                int sqrt = (int)Math.Sqrt(triangle);
                 for (long j = sqrt; j > 0; j--)
                 {
                     if (triangle % j == 0)

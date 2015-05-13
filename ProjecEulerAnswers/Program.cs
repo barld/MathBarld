@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MathBarld.ProjectEuler;
-using System.Console;
 
 namespace ProjecEulerAnswers
 {

@@ -99,7 +99,7 @@ namespace MathBarld.Sudoku
 
             for(int i=0;i<81;i++)
             {
-                sudokuString += "\{SudokuCells[i / 9, i % 9].Answer ?? 0}\t";
+                sudokuString += "{SudokuCells[i / 9, i % 9].Answer ?? 0}\t";
 
                 if (i % 9 == 8 && i != 81)
                     sudokuString += "\n";

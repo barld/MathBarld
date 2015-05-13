@@ -19,7 +19,7 @@ Find the sum of the digits in the number 100!";
         public long GetAnswer()
         {
             BigInteger number = 100;
-            for(BigInteger i=99;i>0;i--)
+            for (BigInteger i = 99; i > 0; i--) 
             {
                 number *= i;
             }

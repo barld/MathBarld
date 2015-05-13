@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MathBarld.Priems;
+using MathBarld;
 
 namespace MathBarld.ProjectEuler
 {
@@ -15,7 +15,7 @@ Find the sum of all the primes below two million.";
 
         public long GetAnswer()
         {
-            var priems = GetPriemsBelowParallel(2000 * 1000);
+            var priems = Priems.GetPriemsBelowParallel(2000 * 1000);
             return priems.Sum(pr => (long)pr);
         }
     }

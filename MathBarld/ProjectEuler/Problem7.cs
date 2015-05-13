@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MathBarld.Priems;
 
 namespace MathBarld.ProjectEuler
 {
@@ -13,6 +12,6 @@ namespace MathBarld.ProjectEuler
 
 What is the 10 001st prime number?";
 
-        public long GetAnswer() => (long)GetPriemN(10001);
+        public long GetAnswer() => (long)Priems.GetPriemN(10001);
     }
 }
