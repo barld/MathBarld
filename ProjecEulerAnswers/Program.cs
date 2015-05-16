@@ -34,6 +34,8 @@ namespace ProjecEulerAnswers
                     new Problem18(),
                     new Problem19(),
                     new Problem20(),
+                    new Problem22(),
+                    new Problem25(),
                 };
             #endregion
 

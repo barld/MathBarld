@@ -45,7 +45,7 @@ namespace MathBarldTest
             Assert.IsTrue(solver.IsSolved);
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void SolveSudoku1()
         {
             var s = new Sudoku(sudokuData[1]);

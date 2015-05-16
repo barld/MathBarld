@@ -162,6 +162,14 @@ namespace MathBarldTest
         }
 
         [TestMethod]
+        public void Problem22()
+        {
+            IProblem p22 = new Problem22();
+
+            Assert.IsTrue(p22.GetAnswer() == 871198282);
+        }
+
+        [TestMethod]
         public void Problem25()
         {
             IProblem p25 = new Problem25();
